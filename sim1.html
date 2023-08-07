@@ -1,0 +1,1087 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful Spiral Art with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colorful Spiral Art with Python Turtle</h1>
+    <p>
+        Welcome to this mesmerizing Python Turtle adventure! In this web page, we'll introduce you to a Python program that creates a captivating and colorful spiral art using the Turtle graphics library. The spiral will gracefully change colors, and you'll be amazed by the beautiful patterns that emerge on your screen!
+    </p>
+    <h2>Python Code for Colorful Spiral Art</h2>
+    <p>
+        Below is the Python code that generates the colorful spiral art. The code utilizes the Turtle graphics library, which is an excellent tool for creating interactive graphics and visualizations.
+    </p>
+    <pre><code>
+from turtle import *
+from colorsys import *
+
+bgcolor('black')
+tracer(100)
+pensize(4)
+h = 0
+
+def draw(ang, n):
+    circle(5 + n, 69)
+    left(ang)
+    circle(5 + 2 * n, 60)
+
+goto(0, 0)
+
+for i in range(500):
+    c = hsv_to_rgb(h, 1, 1)
+    h += 0.005
+    color(c)
+    up()
+    draw(90, i)
+    draw(180, i)
+    down()
+    draw(1/2, i - i)
+    draw(180, i / 2)
+    draw(120, i - i)
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above uses the Turtle graphics library to create the colorful spiral. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>bgcolor('black')</code>: Sets the background color of the graphics window to black.</li>
+        <li><code>tracer(100)</code>: Speeds up the drawing process by updating the screen at every 100th step.</li>
+        <li><code>pensize(4)</code>: Sets the thickness of the drawing pen to 4 units.</li>
+        <li><code>h = 0</code>: Initializes the hue value for the colors used in the spiral.</li>
+        <li><code>draw(ang, n)</code>: A custom function that draws part of the spiral based on the given angle and distance.</li>
+        <li><code>circle(radius, extent)</code>: Draws a circle with the specified radius and extent (portion of the circle to draw).</li>
+        <li><code>hsv_to_rgb(h, 1, 1)</code>: Converts the hue value to an RGB color, producing vibrant colors for the spiral.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the colorful spiral art in action, save the Python code to a file with a .py extension, such as colorful_spiral.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python colorful_spiral.py
+    </code></pre>
+
+    <h2>Behold the Colorful Spiral</h2>
+    <p>
+        As you run the Python program, the Turtle graphics window will pop up and start drawing the colorful spiral. Watch in awe as the spiral emerges, swirling and changing hues as it progresses. The combination of colors and the gradual change of direction create an enchanting visual experience.
+    </p>
+
+    <h2>Experiment and Customize</h2>
+    <p>
+        Feel free to experiment and customize the program! You can adjust the number of colors used in the spiral, the drawing speed, and the size and shape of the spiral. Change the values in the code and see how it affects the resulting spiral art!
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With just a few lines of Python code and the power of Turtle graphics, you've created a captivating and colorful spiral art. It's a delightful way to explore the magic of colors and geometry while showcasing the creative potential of Python.
+    </p>
+    <p>
+        Now you have the tools to mesmerize yourself and others with beautiful spiral art. Go ahead, share your creations, and let the world experience the joy of Python Turtle!
+    </p>
+    <p>
+        Happy coding and enjoy the colorful journey!
+        
+        
+    </p>
+    <p><em>Created by ➖ Haritha Mihimal.</em></p>
+</body>
+</html> 
+
+222222222222222222222
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful Spiral Art with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colorful Spiral Art with Python Turtle</h1>
+    <p>
+        Welcome to this mesmerizing Python Turtle adventure! In this web page, we'll introduce you to a Python program that creates a stunning and colorful spiral art using the Turtle graphics library. The spiral will gracefully change colors, resulting in beautiful patterns that will captivate your eyes!
+    </p>
+    <h2>Python Code for Colorful Spiral Art</h2>
+    <p>
+        Below is the Python code that generates the colorful spiral art. The code uses the Turtle graphics library, which is a fun and interactive way to create visual art with Python.
+    </p>
+    <pre><code>
+import turtle as tur
+import colorsys as cs
+
+tur.setup(800, 800)
+tur.speed(2)
+tur.tracer(10)
+tur.width(2)
+tur.bgcolor("black")
+
+for j in range(25):
+    for i in range(15):
+        tur.color(cs.hsv_to_rgb(i / 15, j / 25, 1))
+        tur.right(90)
+        tur.circle(200 - j * 4, 90)
+        tur.left(90)
+        tur.circle(200 - j * 4, 90)
+        tur.right(180)
+        tur.circle(50, 24)
+
+tur.hideturtle()
+tur.done()
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above creates a colorful spiral art using Turtle graphics. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>tur.setup(800, 800)</code>: Sets up the drawing canvas with a size of 800x800 pixels.</li>
+        <li><code>tur.speed(2)</code>: Sets the drawing speed to 2 (medium).</li>
+        <li><code>tur.tracer(10)</code>: Controls the animation speed by updating the screen every 10 steps.</li>
+        <li><code>tur.width(2)</code>: Sets the pen width to 2 units.</li>
+        <li><code>tur.bgcolor("black")</code>: Sets the background color of the canvas to black.</li>
+        <li><code>cs.hsv_to_rgb(h, s, v)</code>: Converts the HSV color values to RGB for creating vibrant colors.</li>
+        <li><code>tur.circle(radius, extent)</code>: Draws a circle with the specified radius and extent (portion of the circle to draw).</li>
+        <li><code>tur.right(angle)</code> and <code>tur.left(angle)</code>: Rotate the turtle clockwise and counterclockwise, respectively, by the given angle in degrees.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the colorful spiral art in action, save the Python code to a file with a .py extension, such as colorful_spiral.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python colorful_spiral.py
+    </code></pre>
+
+    <h2>Behold the Colorful Spiral</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up and start drawing the colorful spiral. Watch in awe as the spiral emerges, gracefully changing colors along the way. The combination of colors and the elegant spiral patterns create a mesmerizing visual experience.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With just a few lines of Python code and the Turtle graphics library, you've created a stunning and colorful spiral art. It's a delightful way to explore the magic of colors, geometry, and visual art while showcasing the creative potential of Python.
+    </p>
+    <p>
+        Now you have the tools to immerse yourself in the world of vibrant spiral art. Go ahead, experiment, and enjoy the beauty of Python Turtle!
+    </p>
+    <p><em>Created by ➖ Ishan Devpura.</em></p>
+  
+  
+</body>
+</html> -->
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful Spiral Art with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colorful Spiral Art with Python Turtle</h1>
+    <p>
+        Welcome to this enchanting Python Turtle adventure! In this web page, we'll introduce you to a Python program that creates mesmerizing colorful spiral art using the Turtle graphics library. As the program runs, the spiral will gracefully change colors, forming captivating patterns that will leave you amazed!
+    </p>
+    <h2>Python Code for Colorful Spiral Art</h2>
+    <p>
+        Below is the Python code that generates the colorful spiral art. The code uses the Turtle graphics library, a fun and interactive way to create beautiful visual art with Python.
+    </p>
+    <pre><code>
+import turtle
+import colorsys
+
+t = turtle.Turtle()
+s = turtle.Screen().bgcolor('black')
+t.speed(0)
+n = 70
+h = 0
+
+for i in range(360):
+    c = colorsys.hsv_to_rgb(h, 1, 0.8)
+    h += 1 / n
+    t.color(c)
+    t.left(1)
+    t.fd(1)
+    for j in range(2):
+        t.left(2)
+        t.circle(100)
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above uses the Turtle graphics library to create the colorful spiral art. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen.</li>
+        <li><code>turtle.Screen()</code>: Creates a screen object that the turtle will draw on.</li>
+        <li><code>turtle.Screen().bgcolor('black')</code>: Sets the background color of the screen to black.</li>
+        <li><code>t.speed(0)</code>: Sets the drawing speed to the fastest (0) to draw the spiral quickly.</li>
+        <li><code>colorsys.hsv_to_rgb(h, 1, 0.8)</code>: Converts the HSV color values to RGB for creating vibrant colors.</li>
+        <li><code>t.color(c)</code>: Sets the pen color to the RGB color calculated based on the hue (h) value.</li>
+        <li><code>t.left(1)</code>: Rotates the turtle left by 1 degree, which helps in creating the spiral pattern.</li>
+        <li><code>t.fd(1)</code>: Moves the turtle forward by 1 unit to draw the spiral.</li>
+        <li><code>t.circle(100)</code>: Draws a circle with a radius of 100 units.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the colorful spiral art in action, save the Python code to a file with a .py extension, such as colorful_spiral.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python colorful_spiral.py
+    </code></pre>
+
+    <h2>Behold the Colorful Spiral</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up and start drawing the colorful spiral. Watch in awe as the spiral emerges, gracefully changing colors along the way. The combination of colors and the elegant spiral patterns create a mesmerizing visual experience.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With just a few lines of Python code and the Turtle graphics library, you've created a captivating and colorful spiral art. It's a delightful way to explore the magic of colors, geometry, and visual art while showcasing the creative potential of Python.
+    </p>
+    <p>
+        Now you have the tools to immerse yourself in the world of vibrant spiral art. Go ahead, experiment, and enjoy the beauty of Python Turtle!
+    </p>
+    <p><em>Created by - Oshadha</em>  </p>
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Harmonic Motion with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Harmonic Motion with Python Turtle</h1>
+    <p>
+        Welcome to this exciting Python Turtle simulation of Simple Harmonic Motion (SHM)! In this web page, we'll introduce you to a Python program that visually represents an object undergoing SHM using the Turtle graphics library. The object will oscillate back and forth, demonstrating the fascinating concept of periodic motion.
+    </p>
+    <h2>Python Code for Simple Harmonic Motion</h2>
+    <p>
+        Below is the Python code that simulates the simple harmonic motion using the Turtle graphics library. The code creates a visual representation of an object attached to a spring undergoing SHM.
+    </p>
+    <pre><code>
+import turtle
+from math import *
+
+# Initialize the screen
+win = turtle.Screen()
+win.title("Simple Harmonic Motion")
+win.setup(700, 800)
+win.bgcolor('black')
+win.tracer(0)
+
+# Create the water background
+water = turtle.Turtle()
+water.color("lightpink")
+water.up()
+water.ht()
+water.goto(250, -150)
+water.begin_fill()
+for i in range(4):
+    water.lt(90)
+    water.fd(500)
+water.end_fill()
+
+# Create the spring
+spring = turtle.Turtle()
+spring.shape('square')
+spring.color('yellow')
+spring.up()
+spring.goto(0, 300)
+spring.down()
+
+# Create the mass attached to the spring
+m = turtle.Turtle()
+m.shape('square')
+m.color('gray')
+m.up()
+m.goto(225, 330)
+m.down()
+m.pensize(10)
+m.goto(-225, 330)
+m.up()
+
+# Create the pen to display information
+pen = turtle.Pen()
+pen.color('red')
+pen.ht()
+pen.up()
+pen.goto(0, -300)
+
+# Function to update the spring length
+def spring_length(number, stretch):
+    spring.clear()
+    for i in range(number):
+        angle = 0
+        while angle <= 2 * pi:
+            angle = angle + 0.01
+            x = 0.2 * cos(angle)
+            y = 0.2 * sin(angle)
+            spring.goto(spring.xcor() + x, spring.ycor() + y - stretch)
+    spring.goto(spring.xcor(), spring.ycor() - 20)
+
+length = 30  # Spring length at equilibrium
+spring_length(15, length / 1000)
+m.goto(spring.xcor(), spring.ycor())
+m.down()
+m.pensize(1)
+m.color('white')
+m.goto(-200, m.ycor())
+m.goto(200, m.ycor())
+m.shapesize(0.1, 1)
+m.color('blue')
+spring.up()
+spring.goto(0, 300)
+spring.down()
+
+omega = 2
+t = 0
+
+while True:
+    t += 0.1
+    y = 10 * cos(omega * t + pi)
+    v = -10 * omega * sin(omega * t + pi)
+    a = -10 * omega * omega * cos(omega * t + pi)
+
+    length = 30 - y
+
+    s = length / 1000
+    spring_length(15, s)
+    m.goto(m.xcor(), spring.ycor())
+    pen.write("y={:.2f}\tVy = {:.2f}\tAy = {:.2f}".format(y, v, a), align='center')
+    win.update()
+    spring.clear()
+    spring.goto(0, 300)
+    pen.clear()
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above simulates Simple Harmonic Motion using the Turtle graphics library. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Screen()</code>: Creates a screen object for the Turtle graphics.</li>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen.</li>
+        <li><code>spring_length(number, stretch)</code>: A custom function to update the spring length for SHM animation.</li>
+        <li><code>cos()</code> and <code>sin()</code>: Math functions to calculate the position, velocity, and acceleration during SHM.</li>
+        <li><code>while True:</code>: An infinite loop to continuously update the animation as time passes.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To witness the simple harmonic motion simulation in action, save the Python code to a file with a .py extension, such as shm_simulation.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python shm_simulation.py
+    </code></pre>
+
+    <h2>Observe the Simple Harmonic Motion</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up, showing the simulation of simple harmonic motion. Watch the object attached to the spring oscillate back and forth, displaying the principles of periodic motion.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With the power of Python Turtle, you've created a visual representation of Simple Harmonic Motion, demonstrating the fascinating concept of periodic motion. It's an engaging way to explore the world of oscillations and dynamics using Python.
+    </p>
+    <p>
+        Enjoy experimenting with different parameters and seeing how the motion changes. Have fun exploring the wonders of SHM with Python!
+    </p>
+    <p><em>Created by - Oshadha</em></p>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualization of Sine and Cosine Functions with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualization of Sine and Cosine Functions with Python Turtle</h1>
+    <p>
+        Welcome to this exciting Python Turtle visualization of Sine and Cosine functions! In this web page, we'll introduce you to a Python program that beautifully illustrates the Sine and Cosine functions using the Turtle graphics library. Watch as the sine and cosine curves gracefully oscillate on the screen!
+    </p>
+    <h2>Python Code for Visualization</h2>
+    <p>
+        Below is the Python code that creates the visualization of the Sine and Cosine functions using the Turtle graphics library.
+    </p>
+    <pre><code>
+from turtle import *
+import math
+
+ht()
+bgcolor('black')
+penup()
+goto(0, 176)
+color('cyan')
+pendown()
+goto(0, -176)
+penup()
+goto(-225, 0)
+pendown()
+goto(225, 0)
+penup()
+
+goto(0, 95)
+pendown()
+write('-1',)
+penup()
+
+goto(0, -105)
+pendown()
+write('--1',)
+penup()
+
+for x in range(-175, 201):
+    goto(x, 100 * math.sin((x / 100) * 2 * math.pi))
+    pendown()
+goto(201, -2)
+pendown()
+write('y = sin(x)', font=('Arial', 20, 'bold'))
+penup()
+
+penup()
+color('lime')
+
+penup()
+goto(-175, 0)
+pendown()
+for x in range(-175, 201):
+    goto(x, 100 * math.cos((x / 100) * 2 * math.pi))
+    pendown()   
+goto(201, 95)
+pendown()
+write('y = cos(x)', font=('Arial', 20, 'bold'))
+penup()
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above uses the Turtle graphics library to create the visualization of Sine and Cosine functions. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Screen()</code>: Creates a screen object for the Turtle graphics.</li>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen.</li>
+        <li><code>math.sin()</code> and <code>math.cos()</code>: Math functions to calculate the values of Sine and Cosine at different points.</li>
+        <li><code>for x in range(-175, 201):</code>: Loops through a range of x-values to draw the Sine and Cosine curves.</li>
+        <li><code>turtle.goto(x, 100 * math.sin((x / 100) * 2 * math.pi))</code>: Sets the turtle to the corresponding (x, y) point to draw the Sine curve.</li>
+        <li><code>turtle.goto(x, 100 * math.cos((x / 100) * 2 * math.pi))</code>: Sets the turtle to the corresponding (x, y) point to draw the Cosine curve.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To witness the visualization of Sine and Cosine functions, save the Python code to a file with a .py extension, such as sine_cosine_visualization.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python sine_cosine_visualization.py
+    </code></pre>
+
+    <h2>Observe the Sine and Cosine Curves</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up, showing the visualization of Sine and Cosine curves. Watch the curves gracefully oscillate as the Turtle moves across the screen, beautifully representing the periodic nature of Sine and Cosine functions.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With Python Turtle and a touch of mathematics, you've created a stunning visualization of Sine and Cosine functions. It's a delightful way to explore the elegance of mathematical curves using Python.
+    </p>
+    <p>
+        Enjoy experimenting with different parameters and observing how the curves change. Have fun exploring the beauty of Sine and Cosine with Python!
+    </p>
+
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Turtle Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python Turtle Clock</h1>
+    <p>
+        Welcome to this Python Turtle clock project! In this web page, we'll introduce you to a Python program that creates a simple analog clock using the Turtle graphics library. Watch as the clock hands move in real-time to display the current time!
+    </p>
+    <h2>Python Code for the Clock</h2>
+    <p>
+        Below is the Python code that creates the analog clock using the Turtle graphics library.
+    </p>
+    <pre><code>
+import turtle
+import time
+import math
+
+# Function to draw a clock hand
+def draw_clock_hand(length, angle, color):
+    turtle.color(color)
+    turtle.pendown()
+    turtle.setheading(angle)  # Set the heading to rotate clockwise
+    turtle.forward(length)
+    turtle.penup()
+    turtle.stamp()
+    turtle.home()
+
+# Function to draw clock markers
+def draw_clock_markers():
+    for _ in range(12):
+        turtle.color("brown")
+        turtle.penup()
+        turtle.forward(100)
+        turtle.pendown()
+        turtle.forward(30)
+        turtle.penup()
+        turtle.backward(130)
+        turtle.right(30)
+
+# Function to update the clock's time
+def update_time():
+    current_time = time.localtime()
+    hour = current_time.tm_hour
+    minute = current_time.tm_min
+    second = current_time.tm_sec
+
+    # Calculate the angles for the clock hands
+    second_angle = 90 - 6 * second  # Rotate clockwise
+    minute_angle = 90 - 6 * (minute + second / 60)  # Rotate clockwise
+    hour_angle = 90 - 30 * (hour % 12) - minute / 2  # Rotate clockwise
+
+    # Clear the screen and redraw the clock
+    turtle.clear()
+    draw_clock_markers()
+
+    # Draw clock hands
+    draw_clock_hand(60, hour_angle, "blue")
+    draw_clock_hand(80, minute_angle, "green")
+    draw_clock_hand(100, second_angle, "red")
+
+    # Update the screen
+    turtle.update()
+
+    # Wait for one second before updating the time again
+    turtle.ontimer(update_time, 1000)
+
+# Main function
+def main():
+    turtle.speed(0)
+    turtle.bgcolor("white")
+    turtle.title("Python Turtle Clock")
+    turtle.tracer(0, 0)
+    turtle.hideturtle()
+    update_time()
+    turtle.done()
+
+if __name__ == "__main__":
+    main()
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above creates a simple analog clock using the Turtle graphics library. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen.</li>
+        <li><code>turtle.update()</code>: Updates the screen after drawing the clock hands.</li>
+        <li><code>time.localtime()</code>: Retrieves the current time from the system.</li>
+        <li><code>turtle.setheading(angle)</code>: Sets the turtle's heading (direction) to rotate the clock hands clockwise.</li>
+        <li><code>turtle.stamp()</code>: Stamps the turtle on the screen to create the clock hand.</li>
+        <li><code>turtle.ontimer(update_time, 1000)</code>: Sets a timer to update the clock every second.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the analog clock in action, save the Python code to a file with a .py extension, such as turtle_clock.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python turtle_clock.py
+    </code></pre>
+
+    <h2>Observe the Analog Clock</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up, displaying the simple analog clock. The clock hands will move in real-time, indicating the current time. It's a wonderful example of using Python Turtle to create a fun and interactive visualization!
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With the power of Python Turtle, you've created a simple analog clock that displays the current time. It's a delightful way to learn about graphics programming and create interesting visualizations using Python.
+    </p>
+    <p>
+        Enjoy exploring the beauty of the Turtle graphics library and experimenting with different clock designs!
+    </p>
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Double Pendulum Simulation with Python Turtle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Double Pendulum Simulation with Python Turtle</h1>
+    <p>
+        Welcome to this Python Turtle double pendulum simulation! In this web page, we'll introduce you to a Python program that visually simulates a double pendulum using the Turtle graphics library. You'll see how the pendulums' motion evolves over time, creating mesmerizing patterns!
+    </p>
+    <h2>Python Code for the Simulation</h2>
+    <p>
+        Below is the Python code that creates the double pendulum simulation using the Turtle graphics library.
+    </p>
+    <pre><code>
+        
+import turtle
+from math import *
+import scipy.integrate as integrate
+import numpy as np
+import time
+
+win = turtle.Screen()
+win.title("Double pendulum simulation")
+win.setup(800,800)
+win.bgcolor('white')
+win.tracer(0)
+
+################## Change initial conditions
+L1 = 240
+L2 = 240
+theta1 = 100 
+theta2 = 80 
+G = 9.8
+M1 = 1
+M2 = 2
+omega1 = 0
+omega2 = 0
+##################
+
+p1 = turtle.Turtle()
+p1.shape('circle')
+p1.color('red')
+p1.up()
+p1.shapesize(1.5,1.5)
+
+p2 = turtle.Turtle()
+p2.shape('circle')
+p2.color('blue')
+p2.up()
+p2.shapesize(1.5,1.5)
+
+rod1 = turtle.Turtle()
+rod1.shape('circle')
+rod1.shapesize(0.1,0.1)
+rod1.pensize(3)
+rod1.up()
+
+
+rod2 = turtle.Turtle()
+rod2.shape('circle')
+rod2.shapesize(0.1,0.1)
+rod2.up()
+rod2.goto(p1.xcor(),p1.ycor())
+rod2.pensize(3)
+rod2.down()
+
+dt = 0.005
+t = np.arange(0.0,200,dt)
+            
+
+def derivs(state, t):
+
+    dydx = np.zeros_like(state)
+    dydx[0] = state[1]  #theta1(dot) = omega1 (see PDF in directory)
+
+    del_ = state[2] - state[0] # (theta2-theta1)
+    den1 = (M1 + M2)*L1 - M2*L1*cos(del_)*cos(del_)
+    dydx[1] = (M2*L1*state[1]*state[1]*sin(del_)*cos(del_) +  #omega1(dot)
+               M2*G*sin(state[2])*cos(del_) +
+               M2*L2*state[3]*state[3]*sin(del_) -
+               (M1 + M2)*G*sin(state[0]))/den1 
+
+    dydx[2] = state[3] #theta2(dot)
+
+    den2 = (L2/L1)*den1
+    dydx[3] = (-M2*L2*state[3]*state[3]*sin(del_)*cos(del_) +  #omega2(dot)
+               (M1 + M2)*G*sin(state[0])*cos(del_) -
+               (M1 + M2)*L1*state[1]*state[1]*sin(del_) -
+               (M1 + M2)*G*sin(state[2]))/den2
+    
+    return dydx
+
+state = np.radians([theta1,omega1,theta2,omega2])
+y = integrate.odeint(derivs,state,t)
+k = 1
+#p1.down()
+#p2.down()
+
+while k<40000:
+    x1 = L1*sin(y[k][0])
+    y1 = -L1*cos(y[k][0]) + 200 # to ceiling
+    x2 = x1 + L2*sin(y[k][2])
+    y2 = y1 -L2*cos(y[k][2])
+
+    p1.goto(x1,y1)
+    p2.goto(x2,y2)
+    
+    rod1.goto(p1.xcor(),p1.ycor())
+    rod2.goto(p2.xcor(),p2.ycor())
+    win.update()
+    rod1.clear()
+    rod2.clear()
+    rod1.up()
+    rod1.goto(0,200)
+    rod1.down()
+    rod2.up()
+    rod2.goto(p1.xcor(),p1.ycor())
+    rod2.down()
+    k += 1 # How quickly to run through array
+    #time.sleep(0.0001)
+    
+turtle.bye()
+
+
+    
+
+
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above simulates a double pendulum using the Turtle graphics library. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen for the pendulums.</li>
+        <li><code>scipy.integrate.odeint()</code>: Solves the system of differential equations to calculate the motion of the pendulums over time.</li>
+        <li><code>turtle.goto(x, y)</code>: Sets the turtle to the specified (x, y) coordinate to draw the pendulum.</li>
+        <li><code>win.update()</code>: Updates the screen after drawing the pendulums.</li>
+        <li><code>time.sleep(0.0001)</code>: Sets a small delay to control the speed of the simulation.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the double pendulum simulation in action, save the Python code to a file with a .py extension, such as double_pendulum.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python double_pendulum.py
+    </code></pre>
+
+    <h2>Observe the Double Pendulum Motion</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up, displaying the double pendulum simulation. Watch as the two pendulums' motion evolves over time, forming intricate patterns due to their complex dynamics.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With Python Turtle and mathematical integration, you've created a captivating simulation of a double pendulum. It's a delightful way to explore the beauty of physics and visualizations using Python.
+    </p>
+    <p>
+        Enjoy experimenting with different initial conditions and observing how the pendulums behave in various scenarios!
+    </p>
+    <p>Created by - Harith Maduranga</p>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planet Simulation with Pygame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, p, pre {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planet Simulation with Pygame</h1>
+    <p>
+        Welcome to this Python Pygame planet simulation! In this web page, we'll introduce you to a Python program that visually simulates a simple planetary system using the Pygame library. You'll see how the planets move and interact with each other under the influence of gravity!
+    </p>
+    <h2>Python Code for the Simulation</h2>
+    <p>
+        Below is the Python code that creates the planet simulation using the Pygame library.
+    </p>
+    <pre><code>
+import pygame
+import math
+
+pygame.init()
+
+WIDTH, HEIGHT = 800, 800
+WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Planet Simulation")
+
+WHITE = (255, 255, 255)
+YELLOW = (255, 255, 0)
+BLUE = (100, 149, 237)
+RED = (188, 39, 50)
+DARK_GREY = (80, 78, 81)
+
+FONT = pygame.font.SysFont("comicsans", 16)
+
+
+class Planet:
+    AU = 149.6e6 * 1000
+    G = 6.67428e-11
+    SCALE = 250 / AU  # 1AU = 100 pixels
+    TIMESTEP = 3600 * 24  # 1 day
+
+    def __init__(self, x, y, radius, color, mass):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+        self.mass = mass
+
+        self.orbit = []
+        self.sun = False
+        self.distance_to_sun = 0
+
+        self.x_vel = 0
+        self.y_vel = 0
+
+    def draw(self, win):
+        x = self.x * self.SCALE + WIDTH / 2
+        y = self.y * self.SCALE + HEIGHT / 2
+
+        if len(self.orbit) > 2:
+            updated_points = []
+            for point in self.orbit:
+                x, y = point
+                x = x * self.SCALE + WIDTH / 2
+                y = y * self.SCALE + HEIGHT / 2
+                updated_points.append((x, y))
+
+            pygame.draw.lines(win, self.color, False, updated_points, 2)
+
+        pygame.draw.circle(win, self.color, (x, y), self.radius)
+
+        if not self.sun:
+            distance_text = FONT.render(f"{round(self.distance_to_sun / 1000, 1)}km", 1, WHITE)
+            win.blit(distance_text, (x - distance_text.get_width() / 2, y - distance_text.get_height() / 2))
+
+    def attraction(self, other):
+        other_x, other_y = other.x, other.y
+        distance_x = other_x - self.x
+        distance_y = other_y - self.y
+        distance = math.sqrt(distance_x ** 2 + distance_y ** 2)
+
+        if other.sun:
+            self.distance_to_sun = distance
+
+        force = self.G * self.mass * other.mass / distance ** 2
+        theta = math.atan2(distance_y, distance_x)
+        force_x = math.cos(theta) * force
+        force_y = math.sin(theta) * force
+        return force_x, force_y
+
+    def update_position(self, planets):
+        total_fx = total_fy = 0
+        for planet in planets:
+            if self == planet:
+                continue
+
+            fx, fy = self.attraction(planet)
+            total_fx += fx
+            total_fy += fy
+
+        self.x_vel += total_fx / self.mass * self.TIMESTEP
+        self.y_vel += total_fy / self.mass * self.TIMESTEP
+
+        self.x += self.x_vel * self.TIMESTEP
+        self.y += self.y_vel * self.TIMESTEP
+        self.orbit.append((self.x, self.y))
+
+
+def main():
+    run = True
+    clock = pygame.time.Clock()
+
+    sun = Planet(0, 0, 30, YELLOW, 1.98892 * 10 ** 30)
+    sun.sun = True
+
+    earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.9742 * 10 ** 24)
+    earth.y_vel = 29.783 * 1000
+
+    mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39 * 10 ** 23)
+    mars.y_vel = 24.077 * 1000
+
+    mercury = Planet(0.387 * Planet.AU, 0, 8, DARK_GREY, 3.30 * 10 ** 23)
+    mercury.y_vel = -47.4 * 1000
+
+    venus = Planet(0.723 * Planet.AU, 0, 14, WHITE, 4.8685 * 10 ** 24)
+    venus.y_vel = -35.02 * 1000
+
+    planets = [sun, earth, mars, mercury, venus]
+
+    while run:
+        clock.tick(60)
+        WIN.fill((0, 0, 0))
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+        for planet in planets:
+            planet.update_position(planets)
+            planet.draw(WIN)
+
+        pygame.display.update()
+
+    pygame.quit()
+
+
+main()
+    </code></pre>
+
+    <h2>How the Code Works</h2>
+    <p>
+        The Python code above simulates a simple planetary system using the Pygame library. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>pygame.init()</code>: Initializes the Pygame library.</li>
+        <li><code>pygame.display.set_mode((WIDTH, HEIGHT))</code>: Sets up the window with the specified width and height for visualization.</li>
+        <li><code>Planet</code> class: Represents a planet in the simulation and defines methods for updating its position and drawing it on the screen.</li>
+        <li><code>def attraction(self, other)</code>: Calculates the gravitational attraction between two planets.</li>
+        <li><code>def update_position(self, planets)</code>: Updates the position of the planet based on the gravitational forces from other planets.</li>
+        <li><code>pygame.display.update()</code>: Updates the screen to display the current positions of the planets.</li>
+    </ul>
+
+    <h2>Running the Python Code</h2>
+    <p>
+        To see the planet simulation in action, save the Python code to a file with a .py extension, such as planet_simulation.py. Make sure you have the Pygame library installed. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python planet_simulation.py
+    </code></pre>
+
+    <h2>Observe the Planetary System</h2>
+    <p>
+        As you run the Python program, a Pygame window will pop up, displaying the planetary system simulation. Watch as the planets move and interact with each other under the influence of gravity, creating a simple yet fascinating celestial dance!
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        With Pygame and the laws of physics, you've created a captivating simulation of a planetary system. It's a delightful way to explore the dynamics of celestial bodies using Python.
+    </p>
+    <p>
+        Enjoy experimenting with different initial conditions and observing how the planets' motion changes over time!
+    </p>
+</body>
+</html>
